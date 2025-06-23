@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Client KYC Form</title>
+  <style>
+    body {
+      font-family: Arial;
+      margin: 40px;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    input, textarea {
+      width: 300px;
+      padding: 6px;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h2>KYC Form - Demo</h2>
+  <form>
+    <label>First Name:
+      <input type="text" name="first_name">
+    </label>
+
+    <label>Last Name:
+      <input type="text" name="last_name">
+    </label>
+
+    <label>DOB:
+      <input type="date" name="dob">
+    </label>
+
+    <label>Aadhar Number:
+      <input type="text" name="aadhar_number">
+    </label>
+
+    <label>Mobile Number:
+      <input type="tel" name="mobile_number">
+    </label>
+
+    <label>Gmail ID:
+      <input type="email" name="email">
+    </label>
+
+    <label>PAN Number:
+      <input type="text" name="pan_number">
+    </label>
+
+    <label>Address:
+      <textarea name="address" rows="3"></textarea>
+    </label>
+
+    <label>Bank Account Number:
+      <input type="text" name="bank_account">
+    </label>
+
+    <label>IFSC Code:
+      <input type="text" name="ifsc_code">
+    </label>
+
+    <br><br>
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>

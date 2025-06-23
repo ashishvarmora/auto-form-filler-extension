@@ -1,0 +1,42 @@
+import pandas as pd
+import os
+
+# Sample client data
+clients = [
+    {
+        "First Name": "Rahul", "Last Name": "Sharma", "DOB": "1992-05-14", "Aadhar Number": "123456789012",
+        "Mobile Number": "9876543210", "Gmail ID": "rahul.sharma@example.com", "PAN Number": "ABCDE1234F",
+        "Address": "123 Street A, Delhi", "Bank Account Number": "123456789012", "IFSC Code": "SBIN0001234"
+    },
+    {
+        "First Name": "Priya", "Last Name": "Verma", "DOB": "1995-08-22", "Aadhar Number": "234567890123",
+        "Mobile Number": "9876501234", "Gmail ID": "priya.verma@example.com", "PAN Number": "PQRSF5678K",
+        "Address": "45 Lane B, Mumbai", "Bank Account Number": "987654321098", "IFSC Code": "HDFC0005678"
+    },
+    {
+        "First Name": "Amit", "Last Name": "Patel", "DOB": "1988-01-10", "Aadhar Number": "345678901234",
+        "Mobile Number": "9988776655", "Gmail ID": "amit.patel@example.com", "PAN Number": "LMNOP2345R",
+        "Address": "67 Avenue C, Ahmedabad", "Bank Account Number": "456789012345", "IFSC Code": "ICIC0007890"
+    },
+    {
+        "First Name": "Sneha", "Last Name": "Mehta", "DOB": "1993-11-05", "Aadhar Number": "456789012345",
+        "Mobile Number": "9123456780", "Gmail ID": "sneha.mehta@example.com", "PAN Number": "GHIJK3456L",
+        "Address": "89 Crossroad D, Pune", "Bank Account Number": "321654987654", "IFSC Code": "AXIS0004321"
+    },
+    {
+        "First Name": "Rohan", "Last Name": "Desai", "DOB": "1990-03-30", "Aadhar Number": "567890123456",
+        "Mobile Number": "9012345678", "Gmail ID": "rohan.desai@example.com", "PAN Number": "TUVWX6789Z",
+        "Address": "101 Market Street, Surat", "Bank Account Number": "654321098765", "IFSC Code": "PNB0006543"
+    },
+]
+
+# Create output folder if it doesn't exist
+output_folder = "client_excels"
+os.makedirs(output_folder, exist_ok=True)
+
+# Generate 5 Excel files
+for idx, client in enumerate(clients, start=1):
+    df = pd.DataFrame([client])
+    file_name = f"{output_folder}/client_{idx}.xlsx"
+    df.to_excel(file_name, index=False)
+    print(f"Saved: {file_name}")
