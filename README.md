@@ -14,11 +14,6 @@ A lightweight and efficient browser extension to **automatically fill online for
 - 🧪 Preview mode to test before final autofill
 - 🖥️ Clean and intuitive user interface
 
----
-
-## 📸 Screenshots
-
-> *(Add screenshots here after building your UI)*
 
 ---
 
